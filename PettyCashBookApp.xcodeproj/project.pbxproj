@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC6A565D215D91670063D763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6A565C215D91670063D763 /* AppDelegate.swift */; };
+		BC6A565F215D91680063D763 /* PettyCashBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6A565E215D91680063D763 /* PettyCashBookViewController.swift */; };
+		BC6A5662215D91680063D763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A5660215D91680063D763 /* Main.storyboard */; };
+		BC6A5664215D916C0063D763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC6A5663215D916C0063D763 /* Assets.xcassets */; };
+		BC6A5667215D916D0063D763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6A5665215D916D0063D763 /* LaunchScreen.storyboard */; };
+		BC6A566F215D91C10063D763 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6A566E215D91C10063D763 /* Item.swift */; };
+		BC6A5671215D932E0063D763 /* ItemEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6A5670215D932E0063D763 /* ItemEditTableViewController.swift */; };
+		BC6A5673215D96CD0063D763 /* PettyCashDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6A5672215D96CC0063D763 /* PettyCashDataManager.swift */; };
+		BC6A5676215D96E30063D763 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6A5675215D96E30063D763 /* libsqlite3.tbd */; };
+		BC6A5683215D97180063D763 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A567A215D97170063D763 /* FMResultSet.m */; };
+		BC6A5684215D97180063D763 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A567C215D97170063D763 /* FMDatabaseQueue.m */; };
+		BC6A5685215D97180063D763 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A567D215D97170063D763 /* FMDatabaseAdditions.m */; };
+		BC6A5686215D97180063D763 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A567E215D97170063D763 /* FMDatabasePool.m */; };
+		BC6A5687215D97180063D763 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A567F215D97170063D763 /* FMDatabase.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BC6A5659215D91670063D763 /* PettyCashBookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PettyCashBookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC6A565C215D91670063D763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC6A565E215D91680063D763 /* PettyCashBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PettyCashBookViewController.swift; sourceTree = "<group>"; };
+		BC6A5661215D91680063D763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC6A5663215D916C0063D763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC6A5666215D916D0063D763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC6A5668215D916D0063D763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC6A566E215D91C10063D763 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BC6A5670215D932E0063D763 /* ItemEditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEditTableViewController.swift; sourceTree = "<group>"; };
+		BC6A5672215D96CC0063D763 /* PettyCashDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PettyCashDataManager.swift; sourceTree = "<group>"; };
+		BC6A5675215D96E30063D763 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BC6A5677215D97160063D763 /* PettyCashBookApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PettyCashBookApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		BC6A5678215D97160063D763 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		BC6A5679215D97170063D763 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		BC6A567A215D97170063D763 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		BC6A567B215D97170063D763 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		BC6A567C215D97170063D763 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		BC6A567D215D97170063D763 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		BC6A567E215D97170063D763 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		BC6A567F215D97170063D763 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		BC6A5680215D97170063D763 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		BC6A5681215D97170063D763 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		BC6A5682215D97170063D763 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC6A5656215D91670063D763 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6A5676215D96E30063D763 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC6A5650215D91670063D763 = {
+			isa = PBXGroup;
+			children = (
+				BC6A565B215D91670063D763 /* PettyCashBookApp */,
+				BC6A565A215D91670063D763 /* Products */,
+				BC6A5674215D96E30063D763 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BC6A565A215D91670063D763 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC6A5659215D91670063D763 /* PettyCashBookApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC6A565B215D91670063D763 /* PettyCashBookApp */ = {
+			isa = PBXGroup;
+			children = (
+				BC6A565C215D91670063D763 /* AppDelegate.swift */,
+				BC6A565E215D91680063D763 /* PettyCashBookViewController.swift */,
+				BC6A5670215D932E0063D763 /* ItemEditTableViewController.swift */,
+				BC6A5672215D96CC0063D763 /* PettyCashDataManager.swift */,
+				BC6A5660215D91680063D763 /* Main.storyboard */,
+				BC6A5663215D916C0063D763 /* Assets.xcassets */,
+				BC6A5665215D916D0063D763 /* LaunchScreen.storyboard */,
+				BC6A5668215D916D0063D763 /* Info.plist */,
+				BC6A566E215D91C10063D763 /* Item.swift */,
+				BC6A5688215D972B0063D763 /* fmdb */,
+				BC6A5677215D97160063D763 /* PettyCashBookApp-Bridging-Header.h */,
+			);
+			path = PettyCashBookApp;
+			sourceTree = "<group>";
+		};
+		BC6A5674215D96E30063D763 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC6A5675215D96E30063D763 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC6A5688215D972B0063D763 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				BC6A5679215D97170063D763 /* FMDatabase.h */,
+				BC6A567F215D97170063D763 /* FMDatabase.m */,
+				BC6A5682215D97170063D763 /* FMDatabaseAdditions.h */,
+				BC6A567D215D97170063D763 /* FMDatabaseAdditions.m */,
+				BC6A567B215D97170063D763 /* FMDatabasePool.h */,
+				BC6A567E215D97170063D763 /* FMDatabasePool.m */,
+				BC6A5680215D97170063D763 /* FMDatabaseQueue.h */,
+				BC6A567C215D97170063D763 /* FMDatabaseQueue.m */,
+				BC6A5681215D97170063D763 /* FMDB.h */,
+				BC6A5678215D97160063D763 /* FMResultSet.h */,
+				BC6A567A215D97170063D763 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC6A5658215D91670063D763 /* PettyCashBookApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC6A566B215D916D0063D763 /* Build configuration list for PBXNativeTarget "PettyCashBookApp" */;
+			buildPhases = (
+				BC6A5655215D91670063D763 /* Sources */,
+				BC6A5656215D91670063D763 /* Frameworks */,
+				BC6A5657215D91670063D763 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PettyCashBookApp;
+			productName = PettyCashBookApp;
+			productReference = BC6A5659215D91670063D763 /* PettyCashBookApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC6A5651215D91670063D763 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = inagaki;
+				TargetAttributes = {
+					BC6A5658215D91670063D763 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+					};
+				};
+			};
+			buildConfigurationList = BC6A5654215D91670063D763 /* Build configuration list for PBXProject "PettyCashBookApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC6A5650215D91670063D763;
+			productRefGroup = BC6A565A215D91670063D763 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC6A5658215D91670063D763 /* PettyCashBookApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC6A5657215D91670063D763 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6A5667215D916D0063D763 /* LaunchScreen.storyboard in Resources */,
+				BC6A5664215D916C0063D763 /* Assets.xcassets in Resources */,
+				BC6A5662215D91680063D763 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC6A5655215D91670063D763 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6A5683215D97180063D763 /* FMResultSet.m in Sources */,
+				BC6A5671215D932E0063D763 /* ItemEditTableViewController.swift in Sources */,
+				BC6A565F215D91680063D763 /* PettyCashBookViewController.swift in Sources */,
+				BC6A5687215D97180063D763 /* FMDatabase.m in Sources */,
+				BC6A5684215D97180063D763 /* FMDatabaseQueue.m in Sources */,
+				BC6A5686215D97180063D763 /* FMDatabasePool.m in Sources */,
+				BC6A5673215D96CD0063D763 /* PettyCashDataManager.swift in Sources */,
+				BC6A566F215D91C10063D763 /* Item.swift in Sources */,
+				BC6A565D215D91670063D763 /* AppDelegate.swift in Sources */,
+				BC6A5685215D97180063D763 /* FMDatabaseAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BC6A5660215D91680063D763 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC6A5661215D91680063D763 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC6A5665215D916D0063D763 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC6A5666215D916D0063D763 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC6A5669215D916D0063D763 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BC6A566A215D916D0063D763 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC6A566C215D916D0063D763 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PettyCashBookApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.PettyCashBookApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PettyCashBookApp/PettyCashBookApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC6A566D215D916D0063D763 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PettyCashBookApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.PettyCashBookApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PettyCashBookApp/PettyCashBookApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC6A5654215D91670063D763 /* Build configuration list for PBXProject "PettyCashBookApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC6A5669215D916D0063D763 /* Debug */,
+				BC6A566A215D916D0063D763 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC6A566B215D916D0063D763 /* Build configuration list for PBXNativeTarget "PettyCashBookApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC6A566C215D916D0063D763 /* Debug */,
+				BC6A566D215D916D0063D763 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC6A5651215D91670063D763 /* Project object */;
+}
