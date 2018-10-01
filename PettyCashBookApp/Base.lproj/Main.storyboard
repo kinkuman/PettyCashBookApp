@@ -42,6 +42,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mkl-md-HTP" kind="show" identifier="cellTap" id="KqO-md-gTO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,6 +53,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="お小遣い帳" id="1g3-N9-OXn">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="sEI-9Q-0oa">
+                            <connections>
+                                <action selector="editButton:" destination="g41-MJ-97r" id="0cu-TT-flg"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="G7W-Kt-vnV">
                             <connections>
                                 <segue destination="mkl-md-HTP" kind="show" id="5Y8-HI-vnh"/>
@@ -171,4 +179,7 @@
             <point key="canvasLocation" x="-951" y="-150"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KqO-md-gTO"/>
+    </inferredMetricsTieBreakers>
 </document>
