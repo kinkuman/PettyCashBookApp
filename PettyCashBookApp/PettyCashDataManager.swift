@@ -53,7 +53,7 @@ class PettyCashDataManager: NSObject {
         
     }
     
-    // selectの結果をタプルの配列で返す
+    // selectの結果をItemの配列で返す
     func selectData() throws -> [Item] {
         // SQLを発行する
         
@@ -84,6 +84,13 @@ class PettyCashDataManager: NSObject {
         
         // 新しいデータを１つ追加する
         try db.executeUpdate("insert into pettycashbook(name,price) values(?,?)", values: [name,price])
+        
+    }
+    
+    func deleteData(id:Int) throws {
+        
+        // 新しいデータを１つ追加する
+        try db.executeUpdate("delete from pettycashbook where id = ?", values: [id])
         
     }
     

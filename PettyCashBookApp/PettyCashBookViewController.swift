@@ -16,6 +16,11 @@ class PettyCashBookViewController: UITableViewController {
     // データベースから得たデータ
     var data:[Item]!
     
+    // MARK: - LifeCycle
+    
+    override func viewDidLoad() {
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         // データベースを閉じる
         dataManager.close()
@@ -82,41 +87,67 @@ class PettyCashBookViewController: UITableViewController {
      }
      */
     
-//    // Override to support editing the table view.
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            // Delete the row from the data source
-//            tableView.deleteRows(at: [indexPath], with: .fade)
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            
+            // 削除対象となるデータの取り出し
+            let item = data[indexPath.row]
+            
+            // IDを得る
+            do {
+                try dataManager.deleteData(id: item.id)
+                
+                // データの再読み込み
+                data = try dataManager.selectData()
+                
+                // テーブルビューに反映する
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } catch {
+                showAlert(message: "削除処理に失敗しました。")
+            }
+            
+        }
 //        } else if editingStyle == .insert {
 //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
 //        }
-//    }
+    }
 
     
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
+    // 移動機能を使うには並びの管理のための値が必要
+//     // Override to support rearranging the table view.
+//     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+//        // 移動元のデータを切り取り
+//        let srcItem = data.remove(at: fromIndexPath.row)
+//        // 切り取ったデータを挿入
+//        data.insert(srcItem, at: to.row)
+//     }
+//
+//    // Override to support conditional rearranging of the table view.
+//    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+//        // Return false if you do not want the item to be re-orderable.
+//        return true
+//    }
+ 
     
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "cellTap" {
+            // セルのタップ時は値を渡す
+            let next = segue.destination as! ItemEditTableViewController
+            
+            // 選択した行のrow
+            let row = tableView.indexPathForSelectedRow!.row
+            
+            // 次の画面に渡す
+            next.editItem = data[row]
+        }
      }
-     */
+    
     
     // MARK: - UI用自作メソッド
     
@@ -129,6 +160,11 @@ class PettyCashBookViewController: UITableViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func editButton(_ sender: UIBarButtonItem) {
+        tableView.isEditing = !tableView.isEditing
+    }
+    
 
 }
 

@@ -13,6 +13,9 @@ class ItemEditTableViewController: UITableViewController {
     // データ取得先
     var dataManager:PettyCashDataManager! = nil
     
+    // 編集できた時のデータ
+    var editItem:Item? = nil
+    
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var priceTextField: UITextField!
@@ -31,23 +34,26 @@ class ItemEditTableViewController: UITableViewController {
             return
         }
         
-        if let numPrice = Int(price) {
-            
-            do {
-                // insert処理
-                try dataManager.insertData(name: name, price: numPrice)
-                
-                // 登録できたら入力内容を消す
-                nameTextField.text = ""
-                priceTextField.text = ""
-            } catch {
-                showAlert(message: "データベースへ登録ができません")
-            }
-            
-        } else {
+        guard let numPrice = Int(price) else {
             priceTextField.text = ""
             priceTextField.placeholder = "数値で入力してください"
+            
+            return
         }
+        
+        
+        do {
+            // insert処理
+            try dataManager.insertData(name: name, price: numPrice)
+            
+            // 登録できたら入力内容を消す
+            nameTextField.text = ""
+            priceTextField.text = ""
+        } catch {
+            showAlert(message: "データベースへ登録ができません")
+        }
+            
+        
     }
     
     
@@ -56,10 +62,17 @@ class ItemEditTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        // セル選択からきた場合はeditItemの中身がnilではない
+        if let item = editItem {
+            // 初期値をセットする
+            nameTextField.text = item.name
+            priceTextField.text = String(item.price)
+        }
     }
 
     override func didReceiveMemoryWarning() {
